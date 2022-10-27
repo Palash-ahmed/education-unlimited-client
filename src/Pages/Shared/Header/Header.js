@@ -37,7 +37,7 @@ const Header = () => {
                         <Link className='text-white text-decoration-none mx-3' to="/">Home</Link>
                         <Link className='text-white text-decoration-none ' to="/allcourses">All Courses</Link>
                         <Link className='text-white text-decoration-none mx-3' to="/">FAQ</Link>
-                        <Link className='text-white text-decoration-none ' to="/allcourses">Blog</Link>
+                        <Link className='text-white text-decoration-none ' to="/blog">Blog</Link>
                     </Nav>
 
                  {/* User Profile and Name show on header    */}

@@ -7,6 +7,11 @@ import './Courses.css'
 
 const Courses = () => {
     const courseDetails = useLoaderData();
+
+
+    // Mapping
+    // ========
+    
     return (
         <div>
             <Container>

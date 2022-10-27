@@ -10,6 +10,10 @@ import Lottie from 'lottie-react';
 import learning from '../../assets/80356-online-learning.json'
 
 const Home = () => {
+
+    // Carousel 
+    // ============
+
     return (
         <div>
             <div style={{ background: "#1b5199" }}>
@@ -54,6 +58,9 @@ const Home = () => {
                         <h1 className='fs-1 fw-bolder my-4 py-4'>Improve Your Preparation For <span className='text-primary'>Computer Science <br /> Engineering, </span>HTML, CSS, JavaScript,React, <br /> React Router, <br /> ReactJS, Node etc. </h1>
                         <Link to="/allcourses"><Button className='btn btn-primary my-4'><span className='fs-2 fw-bold'>Get Started</span></Button></Link>
                     </Col>
+                    {/* Lottie Animation */}
+                    {/* ===================== */}
+                    
                     <Col lg="6">
                     <Lottie animationData={learning} loop={true} />
                     </Col>

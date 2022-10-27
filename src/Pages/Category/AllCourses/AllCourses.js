@@ -6,6 +6,9 @@ import './AllCourses.css'
 import LeftSideNav from '../../Shared/LeftSideNav/LeftSideNav';
 
 const AllCourses = () => {
+    // Use Loader
+    // =============
+    
     const allCourses = useLoaderData();
     return (
         <div>

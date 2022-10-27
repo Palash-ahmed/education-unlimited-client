@@ -18,6 +18,10 @@ const Details = () => {
                     <div>
                         <h2 className='fw-bolder ms-4'>{title}</h2>
                     </div>
+
+                    {/* Create Pdf Button */}
+                    {/* ========================== */}
+                    
                     <div className='me-4'>
                         <Pdf targetRef={ref} filename="code-example.pdf">
                             {({ toPdf }) => <Button onClick={toPdf}><FaDownload></FaDownload></Button>}

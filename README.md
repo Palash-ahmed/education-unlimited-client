@@ -1,3 +1,30 @@
+
+<h1>Do this at first</h1>
+
+<ol>
+    <li>Create firebase app</li>
+    <li>Get firebase configuration inside firebase.config.js</li>
+    <li>Create a React App</li>
+    <li>Install firebase React router dom</li>
+    <li>Install bootstrap and react-bootstrap</li>
+    <li>Make sure to import bootstrap css in the index.js file</li>
+</ol>
+
+
+
+<h1>Install</h1>
+
+<ol>
+    <li>Install headless ui / react </li>
+    <li>lottie react install</li>
+    <li>Install React-hot-toast </li>
+    <li>Install React-icons</li>
+    <li>Install React-to-pdf</li>
+    <li>Install React-tooltip</li>
+</ol>
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

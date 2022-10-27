@@ -6,6 +6,10 @@ import './CourseCard.css'
 
 const CoursesCard = ({ course }) => {
     const {_id, title, details, image_url, balance} = course;
+
+    // Card Details
+    // ==============
+    
     return (
         <div>
             <Card className='bg-light h-100 shadow-lg border border-0"'>

@@ -12,29 +12,49 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    // google sign up
+    // =================
+
     const googleProviderLogin = (provider) =>{
         setLoading(true);
         return signInWithPopup(auth, provider);
     }
+
+    // Github sign up
+    // ==================
 
     const githubProviderLogin = (provider) =>{
         setLoading(true);
         return signInWithPopup(auth, provider);
     }
 
+    // Register
+    // ==========
+
     const registerUser = (email, password) =>{
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
+
+    // Login
+    // ========
 
     const logIn = (email, password) =>{
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
+    // Verify Email
+    // =================
+
     const verifyEmail =()=>{
         return sendEmailVerification(auth.currentUser);
     }
+
+    // Logout
+    // =======
+
+    
     const logOut = () =>{
         setLoading(true);
         return signOut(auth);

@@ -8,11 +8,13 @@ import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
 import Blog from "../../Pages/Shared/Blog/Blog";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ErrorPage from "../../ErrorPage/ErrorPage";
 
 export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -46,5 +48,6 @@ export const routes = createBrowserRouter([
                 element: <Blog></Blog>
             }
         ]
-    }
+    },
+    
 ])

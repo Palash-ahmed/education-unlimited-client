@@ -33,25 +33,39 @@ const Blog = () => {
             <Accordion.Item eventKey="2">
                 <Accordion.Header> <h5>How does the private route work?</h5> </Accordion.Header>
                 <Accordion.Body>
+                    <p>The private route component is used to protect selected pages in a React app from unauthenticated users.</p>
                     <p>The private route component is similar to the public route, the only change is that redirect URL and authenticate condition. If the user is not authenticated he will be redirected to the login page and the user can only access the authenticated routes If he is authenticated (Logged in).</p>
                     <p>
                         Protected routes are those routes that only grant access to authorized users. This means that users must first meet certain conditions before accessing that specific route. For instance, your application can require only logged-in users be able to visit the dashboard page.
                     </p>
                     <p>
-                        {/* import {Navigate} from "react-router-dom"; import {useAuth} from "../hooks/useAuth"; export const ProtectedRoute = ({children}) => { const {user} = useAuth(); if (!user) { // user is not authenticated return <Navigate to="/" />; } return children; }; To redirect the user, we use the <Navigate /> component. */}
+                        Public and Private routes will also restrict accessing the previously visited routes using the browser back button after logout. I hope you have found this useful. Thank you for reading.
                     </p>
                 </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="3">
                 <Accordion.Header><h5>What is Node? How does Node work?</h5></Accordion.Header>
                 <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    <p>Node.js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the client's browser. Ryan Dahl developed it in 2009, and its latest iteration, version 15.14, was released in April 2021. Developers use Node.js to create server-side web applications, and it is perfect for data-intensive applications since it uses an asynchronous, event-driven model.
+                    </p>
+                    <p>
+                        There are many reasons for which we prefer using NodeJs for the server side of our application, some of them are discussed in the following:</p>
+
+                    NodeJs is built on Google Chrome’s V8 engine, and for this reason its execution time is very fast and it runs very quickly.
+                    <p>
+                        There are more than 50,000 bundles available in the Node Package Manager and for that reason developers can import any of the packages any time according to their needed functionality for which a lot of time is saved.
+                    </p>
+                    <p>
+                        As NodeJs do not need to wait for an API to return data , so for building real time and data intensive web applications, it is very useful. It is totally asynchronous in nature that means it is totally non-blocking.
+                    </p>
+                    <p>
+                        The loading time for an audio or video is reduced by NodeJs because there is better synchronization of the code between the client and server for having the same code base.
+                    </p>
+                    <p>
+                        As NodeJs is open-source and it is nothing but a JavaScript framework , so for the developers who are already used to JavaScript, for them starting developing their projects with NodeJs is very easy.
+                    </p>
+
+
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>

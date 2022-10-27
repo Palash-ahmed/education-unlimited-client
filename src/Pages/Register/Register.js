@@ -6,11 +6,12 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
 const Register = () => {
     const [error, setError] = useState(null);
-    const { registerUser } = useContext(AuthContext);
+    const { registerUser, verifyEmail } = useContext(AuthContext);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -36,8 +37,16 @@ const Register = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                handleEmailVerification();
+                toast.success('Please verify your email address.');
             })
             .catch(error => console.error(error));
+    }
+
+    const handleEmailVerification = () =>{
+        verifyEmail()
+        .then(() =>{})
+        .catch(error=> console.error(error));
     }
 
 

@@ -15,9 +15,9 @@ const CoursesCard = ({ course }) => {
                     <Card.Text>
                         {
                         details.length >100 ?
-                        <p>{details.slice(0, 100) + '...'}</p>
+                        <>{details.slice(0, 100) + '...'}</>
                         :
-                        <p>{details}</p>
+                        details
                         }
                     </Card.Text>
                     <div className='text-center align-content-center justify-content-center'>

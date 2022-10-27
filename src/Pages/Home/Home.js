@@ -15,34 +15,37 @@ const Home = () => {
             <div style={{ background: "#1b5199" }}>
                 <Carousel className='container' fade>
                     <Carousel.Item>
-                        <img
+                        <img 
                             className="d-block m-auto my-4 w-100 rounded"
                             src={Carousel1}
                             alt="First slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
-                            className="d-block m-auto my-4 w-100 rounded"
+                        <img 
+                            className="d-block m-auto my-4 w-100 h-50 rounded"
                             src={Carousel2}
                             alt="Second slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
-                            className="d-block m-auto my-4 w-100 rounded"
+                        <img 
+                            className="d-block m-auto my-4 w-100 h-50 rounded"
                             src={Carousel3}
                             alt="Third slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img
-                            className="d-block m-auto my-4 w-100 rounded"
+                        <img 
+                            className="d-block m-auto my-4 w-100 h-50 rounded"
                             src={Carousel4}
                             alt="Forth slide"
                         />
                     </Carousel.Item>
                 </Carousel>
+            </div>
+            <div>
+                <h1 className='fw-bolder fs-1 text-center my-4'>Welcome to <span className='text-primary'>Education Unlimited</span></h1>
             </div>
             <div>
             <Container>

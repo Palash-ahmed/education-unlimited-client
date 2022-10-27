@@ -10,6 +10,7 @@ import { FaUser } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import education from '../../../assets/education.png';
 import { Form } from 'react-bootstrap';
+import { } from '@headlessui/react';
 
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
         // Navigation bar
         // ===============
 
-        <Navbar style={{background: "#1b5199"}} collapseOnSelect className='navbar mb-4 p-4' expand="lg">
+        <Navbar style={{ background: "#1b5199" }} collapseOnSelect className='navbar mb-4 p-4' expand="lg">
             <Container>
                 <Navbar.Brand><Link className='text-white text-decoration-none fs-2 fw-bolder' to='/'> <img style={{ height: '40px' }} src={education} alt="edu" /> Education Unlimited</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -40,16 +41,15 @@ const Header = () => {
                         <Link className='text-white text-decoration-none ' to="/blog">Blog</Link>
                     </Nav>
 
-                 {/* User Profile and Name show on header    */}
-                 {/* ================================================ */}
-                 
+                    {/* User Profile and Name show on header    */}
+                    {/* ================================================ */}
+
                     <Nav>
                         <>
                             {
                                 user?.uid ?
                                     <>
                                         <Button className='me-3 my-3' variant="light" onClick={handleLogOut}>Log out</Button>
-                                        <span className=' my-3 text-white fw-bold'>{user?.displayName}</span>
                                     </>
                                     :
                                     <>
@@ -58,14 +58,24 @@ const Header = () => {
                                     </>
                             }
                         </>
-                        <Nav.Link eventKey={2} href="#memes">
+
+                        {/* Tooltips Done */}
+                        {/* ==================== */}
+
+                        
+                        <Link className='text-white mx-2 my-3' to="/" aria-label='Home'
+                        title={user?.displayName}>
+                            
                             {user?.photoURL ?
                                 <Image
                                     style={{ height: '40px' }} roundedCircle
-                                    src={user?.photoURL}></Image>
+                                    src={user?.photoURL}
+                                    ></Image>
                                 : <FaUser className='text-white mx-2 my-3' variant="light"></FaUser>
+                            
                             }
-                        </Nav.Link>
+                        </Link>
+                        
                         <Form>
                             <Form.Check className='text-white mx-2 my-3'
                                 type="switch"

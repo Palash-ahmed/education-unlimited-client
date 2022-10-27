@@ -17,12 +17,18 @@ const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
+    // Log out
+    // ===============
+
     const handleLogOut = () => {
         logOut()
             .then(() => { })
             .catch(error => console.error(error))
     }
     return (
+        // Navigation bar
+        // ===============
+
         <Navbar collapseOnSelect className='navbar mb-4 p-4' expand="lg">
             <Container>
                 <Navbar.Brand><Link className='text-white text-decoration-none fs-2 fw-bolder' to='/'> <img style={{ height: '40px' }} src={education} alt="edu" /> Education Unlimited</Link></Navbar.Brand>
@@ -34,6 +40,10 @@ const Header = () => {
                         <Link className='text-white text-decoration-none mx-3' to="/">FAQ</Link>
                         <Link className='text-white text-decoration-none ' to="/allcourses">Blog</Link>
                     </Nav>
+
+                 {/* User Profile and Name show on header    */}
+                 {/* ================================================ */}
+                 
                     <Nav>
                         <>
                             {
@@ -64,6 +74,8 @@ const Header = () => {
                             />
                         </Form>
                     </Nav>
+                    {/* Left Side Navigation bar created */}
+                    {/* ========================================= */}
                     <div className='d-lg-none'>
                         <LeftSideNav></LeftSideNav>
                     </div>

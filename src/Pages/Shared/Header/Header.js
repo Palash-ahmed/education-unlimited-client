@@ -9,7 +9,6 @@ import Image from 'react-bootstrap/Image'
 import { FaUser } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import education from '../../../assets/education.png';
-import './Header.css';
 import { Form } from 'react-bootstrap';
 
 
@@ -29,7 +28,7 @@ const Header = () => {
         // Navigation bar
         // ===============
 
-        <Navbar collapseOnSelect className='navbar mb-4 p-4' expand="lg">
+        <Navbar style={{background: "#1b5199"}} collapseOnSelect className='navbar mb-4 p-4' expand="lg">
             <Container>
                 <Navbar.Brand><Link className='text-white text-decoration-none fs-2 fw-bolder' to='/'> <img style={{ height: '40px' }} src={education} alt="edu" /> Education Unlimited</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
